@@ -266,6 +266,126 @@ button {
     color: #a83338;
 }
 
+/* FOOTER */
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-subscribe {
+    flex: 1 1 300px;
+}
+
+.footer-subscribe h2 {
+    font-size: 24px;
+}
+
+.siman-red {
+    color: #c8102e;
+}
+
+.gray {
+    color: #555;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+    align-items: flex-start; /* mantiene alineación a la izquierda */
+}
+
+.subscribe-form input {
+    width: 350px; /* tamaño reducido */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.subscribe-form button {
+    width: 350px; /* igual al input */
+    padding: 8px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #c8102e;
+}
+
+
+.subscribe-form button:hover {
+    background-color: #c8102e;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c8102e;
+}
+
+/* Servicios */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #444;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-section a:hover {
+  color: #c8102e;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .top-bar {
@@ -324,6 +444,10 @@ button {
 
     .cart-icon {
         font-size: 18px;
+    }
+
+    .footer-container {
+        flex-direction: column;
     }
 }
 
