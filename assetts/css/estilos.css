@@ -18,27 +18,54 @@ button {
 }
 
 /* Línea superior con logo y buscador */
+/* TOP BAR: distribuye logo | buscador | iconos */
 .top-bar {
     background-color: #960018;
     color: white;
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* <- evita que salten de línea */
+    gap: 10px;
 }
 
 /* Logo */
+.logo {
+    flex: 0 0 auto;
+}
+
 .logo img {
     height: 28px;
 }
 
-/* Cuadro de búsqueda */
+/* Buscador */
 .search-box {
-    margin-left: 190px;
+    flex: 1 1 auto;
     padding: 8px 12px;
     border-radius: 18px;
     border: none;
-    width: 650px;
-    max-width: 100%;
+    max-width: 50%;
+    min-width: 80px;
+}
+
+/* Iconos */
+.icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.icon a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.icon a:hover {
+    color: #ddd;
 }
 
 /* Menú de navegación */
@@ -128,7 +155,8 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 0 50px 50px 50px;;
+    padding: 0 50px 50px 50px;
+    ;
 }
 
 .card {
@@ -136,11 +164,6 @@ button {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
     overflow: hidden;
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
 }
 
 .card img {
@@ -164,20 +187,99 @@ button {
     text-align: center;
 }
 
+/*Formulario*/
+.container-form {
+    max-width: 500px;
+    margin: 35px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-form h2 {
+    text-align: center;
+    color: #960018;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.container-form input,
+.container-form select,
+.container-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.btn-enviar {
+    background-color: #a83338;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #960018;
+}
+
+/* Contacto directo */
+.contact-container {
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-container h2 {
+    color: #960018;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container a {
+    display: block;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.contact-container a i {
+    margin-right: 8px;
+    color: #a83338;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .top-bar {
-        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .logo img {
-        margin-left: 10px;
-        height: 18px;
+        height: 22px;
     }
 
     .search-box {
-        margin-left: 50px;
-        width: 240px;
+        max-width: 100%;
+        font-size: 14px;
     }
 
     .nav-bar {
@@ -216,7 +318,13 @@ button {
         max-height: 150px;
     }
 
+    .user-icon {
+        display: none;
+    }
 
+    .cart-icon {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -225,13 +333,12 @@ button {
     }
 
     .logo img {
-        height: 16px;
+        height: 18px;
     }
 
     .search-box {
-        font-size: 14px;
-        padding: 8px 10px;
-        margin-left: 20px;
+        font-size: 12px;
+        padding: 6px 10px;
     }
 
     .nav-bar ul li a {
@@ -254,4 +361,11 @@ button {
         max-height: 150px;
     }
 
+    .user-icon {
+        display: none;
+    }
+
+    .cart-icon {
+        font-size: 18px;
+    }
 }

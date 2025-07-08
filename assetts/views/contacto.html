@@ -1,0 +1,109 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="icon" href="../images/logoIco.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="../images/SimanLogo.png" alt="Siman Logo">
+            </div>
+
+            <input type="text" name="Buscar" class="search-box" placeholder="Buscar...">
+
+            <div class="icon">
+                <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="rebajas.html">Rebajas</a></li>
+                <li><a href="exclusivo.html">Exclusivo Online</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="medium-section">
+            <div class="row-layout">
+                <div class="text-side">
+                    <h3>Contactanos</h3>
+                    <p>Estamos comprometidos a brindarte la mejor experiencia posible.
+                     Ya sea que tengas alguna sugerencia, o simplemente quieras compartir tu experiencia con nosotros.
+                    </p>
+                </div>
+                <div class="image-side">
+                    <img src="../images/ilustracion.png" alt="Imagen grande">
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <main>
+        <div class="container-form">
+            <div class="info-form">
+                <h2>¿Como te podemos ayudar el dia de hoy?</h2>
+            </div>
+            <form action="#" autocomplete="off">
+                <select id="slContacto" required>
+                    <option value="" disabled selected>Selecciona tu razon de contacto</option>
+                    <option value="Servicio al cliente">Servicio al cliente</option>
+                    <option value="Quejas o reclamos">Quejas o reclamos</option>
+                    <option value="Ayuda con los pedidos">Ayuda con los pedidos</option>
+                </select>
+                <br />
+                <br />
+
+                <label>Nombre:</label>
+                <br />
+                <input type="text" id="txtNombre" required />
+                <br />
+                <br />
+
+                <label>Correo:</label>
+                <br />
+                <input type="email" id="txtCorreo" required />
+                <br />
+                <br />
+
+                <label>Teléfono:</label>
+                <br />
+                <input type="tel" id="txtTelefono" required />
+                <br />
+                <br />
+
+                <label>Comentarios:</label>
+                <br />
+                <textarea id="txtComentarios" rows="3" cols="60" required></textarea>
+                <br />
+                <br />
+
+                <button type="submit" class="btn-enviar">Enviar mensaje</button>
+            </form>
+        </div>
+        <hr />
+        <div class="contact-container">
+            <h2>Contacto directo</h2>
+
+            <a href="#"><i class="fa-solid fa-phone"></i>2298-3777</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>contacto@siman.com</a>
+        </div>
+    </main>
+
+</body>
+
+</html>
