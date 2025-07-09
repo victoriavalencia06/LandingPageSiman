@@ -18,7 +18,6 @@ button {
 }
 
 /* Línea superior con logo y buscador */
-/* TOP BAR: distribuye logo | buscador | iconos */
 .top-bar {
     background-color: #960018;
     color: white;
@@ -27,7 +26,6 @@ button {
     padding: 10px 20px;
     justify-content: space-between;
     flex-wrap: nowrap;
-    /* <- evita que salten de línea */
     gap: 10px;
 }
 
@@ -180,14 +178,54 @@ button {
     margin: 0 0 10px;
 }
 
-/*Clase para centrar textos (solo si es necesario)*/
-.center {
-    margin: 15px, 0, 0, 15px;
-    padding: 10px;
+/*Seccion beneficios*/
+.beneficios {
+    background-color: #f8f9fa;
+    padding: 25px 20px;
     text-align: center;
 }
 
-/*Formulario*/
+.beneficios h2 {
+    margin-bottom: 40px;
+}
+
+.beneficios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.beneficio {
+    background-color: #ffffff;
+    width: 260px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.beneficio i {
+    font-size: 36px;
+    color: #c3002f;
+    margin-top: 15px;
+}
+
+.beneficio h4 {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.beneficio p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.siman-red {
+    color: #c3002f;
+}
+
+/* Vista de contacto Formulario*/
 .container-form {
     max-width: 500px;
     margin: 35px auto;
@@ -303,12 +341,12 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 15px 0;
-    align-items: flex-start; /* mantiene alineación a la izquierda */
+    margin-bottom: 5px;
+    align-items: flex-start;
 }
 
 .subscribe-form input {
-    width: 350px; /* tamaño reducido */
+    width: 350px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -316,7 +354,7 @@ button {
 }
 
 .subscribe-form button {
-    width: 350px; /* igual al input */
+    width: 350px;
     padding: 8px;
     background-color: #000;
     color: #fff;
@@ -346,44 +384,51 @@ button {
     color: #c8102e;
 }
 
-/* Servicios */
+/* Footer - Servicios */
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .footer-section {
-  flex: 1 1 200px;
-  min-width: 200px;
-  text-align: center;
+    flex: 1 1 200px;
+    min-width: 200px;
+    text-align: center;
 }
 
 .footer-section h4 {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .footer-section li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-section a {
-  color: #444;
-  text-decoration: none;
-  font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .footer-section a:hover {
-  color: #c8102e;
+    color: #c8102e;
+}
+
+/*Clase para centrar textos (solo si es necesario)*/
+.center {
+    margin: 15px, 0, 0, 15px;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Responsive */
