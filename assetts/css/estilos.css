@@ -311,6 +311,34 @@ button {
     font-size: 1.1em;
 }
 
+.precio-tarjeta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.precio-azul {
+    color: #002f6c; /* azul oscuro */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.etiqueta-descuento-azul {
+    background-color: #002f6c;
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.icono-tarjeta {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
 .etiqueta-descuento {
     background-color: #c3002f;
     color: white;
