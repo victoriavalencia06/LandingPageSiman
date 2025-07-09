@@ -225,6 +225,122 @@ button {
     color: #c3002f;
 }
 
+/* Vista de rebajas*/
+/* Sección rebajas en general */
+.seccion-rebajas {
+    padding: 10px 30px;
+    background-color: #f9f9f9;
+}
+
+.rebajas-wrapper {
+    position: relative;
+}
+
+/* Contenedor flexible, pero solo scroll en móviles */
+.rebajas-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.slider-btn {
+    background-color: #c3002f;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+.card-rebaja {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-rebaja img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-rebaja .marca {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card-rebaja .titulo {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 8px 0;
+    color: #222;
+}
+
+.card-rebaja .vendido-por {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.precios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.original {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.descuento {
+    color: #c3002f;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.etiqueta-descuento {
+    background-color: #c3002f;
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    border-radius: 4px;
+}
+
+.btn-carrito {
+    background-color: #c3002f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: auto;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.btn-carrito:hover {
+    background-color: #a60028;
+}
+
+/* SLIDER oculto en desktop */
+/* Botones de flechas ocultos en pantallas grandes */
+.slider-btn {
+    display: none;
+}
+
 /* Vista de contacto Formulario*/
 .container-form {
     max-width: 500px;
@@ -432,7 +548,7 @@ button {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .top-bar {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -493,6 +609,43 @@ button {
 
     .footer-container {
         flex-direction: column;
+    }
+
+    .rebajas-contenedor {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .rebajas-contenedor .card-rebaja {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+    .slider-btn {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #c3002f;
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .slider-btn.left {
+        left: 10px;
+    }
+
+    .slider-btn.right {
+        right: 10px;
     }
 }
 
