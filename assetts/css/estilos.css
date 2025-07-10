@@ -388,15 +388,25 @@ button {
 /*Carrusel*/
 .carrusel-promociones {
     width: 100%;
+    max-width: 1230px;
+    margin: 20px auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.carrusel-promociones {
+    width: 100%;
     overflow: hidden;
     position: relative;
     margin: 20px auto;
     max-width: 1230px;
 }
 
+/* Carrusel deslizable */
 .carrusel {
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px;
 }
 
 .carrusel img {
@@ -427,14 +437,22 @@ button {
     background-color: #333;
 }
 
-
-/* Mostrar solo uno según tamaño pantalla */
-.desktop {
-    display: flex;
+/*Promociones*/
+.solo-desktop,
+.solo-movil {
+    display: none;
 }
 
-.mobile {
-    display: none;
+.solo-desktop {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.solo-desktop img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
 }
 
 /* Vista de contacto*/
@@ -760,7 +778,20 @@ button {
     .mobile {
         display: flex;
     }
-  
+
+    .solo-desktop{
+        display: none;
+    }
+
+    .solo-movil {
+        display: block;
+        padding: 10px;
+    }
+
+    .solo-movil img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
